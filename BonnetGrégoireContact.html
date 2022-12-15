@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+
+<head>
+
+	<title>Présentation</title>
+
+	<meta http-equiv="content-type" content="text/html;charset=utf-7" />
+
+	<link href="BonnetGrégoireStyle.css" media="all" rel="stylesheet" type="text/css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <div class="loader">
+       <h3>Chargement...</h3>
+       <div class="line"></div>
+       <div class="line"></div>
+       <div class="line"></div>
+       <div class="line"></div>
+       <script src="BonnetGrégoire.js"></script>
+    </div>
+    <div class="sidebar">
+      <a href="BonnetGrégoirePrésentation.html"><i class="fa-solid fa-passport"></i> Mes informations personelles</a>
+      <a href="BonnetGrégoireEtudes.html"><i class="fa-sharp fa-solid fa-graduation-cap"></i> Mes études</a>
+      <a href="BonnetGrégoireLoisirs.html"><i class="fa-sharp fa-solid fa-futbol"></i> Mes Loisirs</a>
+      <a href="BonnetGrégoireContact.html"><i class="fa-solid fa-phone"></i> Me Contacter</a>
+
+        <span>		
+            <script language="JavaScript">
+                document.write("<font color='#000000' size='4' face='Verdana, sans-serif'>")
+                var mydate=new Date()
+                var year=mydate.getYear()
+                var day=mydate.getDay()
+                var month=mydate.getMonth()
+                var daym=mydate.getDate()
+                if (daym<10)
+                    daym="0"+daym
+                if (month<10)
+                    month="0"+month
+                if (year<2000)
+                    year += (year < 1900) ? 1900 : 0
+                    
+                var hours=mydate.getHours()
+                var minutes=mydate.getMinutes()
+                var seconds=mydate.getSeconds()
+                if (minutes<=9)
+                    minutes="0"+minutes
+                if (seconds<=9)
+                    seconds="0"+seconds
+                    
+                document.write("Nous sommes le "+daym+"/"+month+"/"+year+".<br/> Il est "+hours+" h "+minutes+".")
+                
+            </script>
+         </span>
+    </div>
+    <main>
+        <form>
+            <h2>Contactez-moi</h2>
+            <div class="separation"></div>
+            <div class="corps-formulaire">
+              <div class="gauche">
+                <div class="groupe">
+                  <label>Votre Nom</label>
+                  <input type="text" autocomplete="off" />
+                  <i class="fas fa-user"></i>
+                </div>
+                <div class="groupe">
+                  <label>Votre Prénom</label>
+                  <input type="text" autocomplete="off" />
+                  <i class="fas fa-user"></i>
+                </div>
+                <div class="groupe">
+                  <label>Votre @mail</label>
+                  <input type="text" autocomplete="off" />
+                  <i class="fas fa-envelope"></i>
+                </div>
+              </div>
+      
+              <div class="droite">
+                <div class="groupe">
+                  <label>Description de la demande</label>
+                  <textarea placeholder="Saisissez ici..."></textarea>
+                </div>
+              </div>
+            </div>
+      
+            <div class="pied-formulaire" align="center">
+              <button>Envoyer</button>
+            </div>
+          </form>
+    </main>
+</body>

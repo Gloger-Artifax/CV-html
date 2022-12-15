@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"); /*font-family: 'Kenia', cursive;*/
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap'); /*font-family: 'Ubuntu', sans-serif;*/
+
+body{
+  background: url(bg2.jpg);
+  background-position: center;
+  background-repeat: none;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+main{
+  margin-left: 300px;
+  padding: 0px 10px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+h1{
+  color: #ffffff;
+  text-align: center;
+  text-decoration: solid;
+  padding: 50px;
+  position: center;
+  backdrop-filter: blur(150px);
+  border-radius: 30px;
+  box-shadow: 0 0px 30px;
+  animation: shadowh1 10s linear infinite;
+}
+
+h2{
+  color: #000000;
+  text-align: center;
+  text-decoration: solid;
+}
+
+p{
+  color: #f1f1f1;
+  text-align: right;
+  padding: 0;
+  margin: 15px 0 5px 0;
+  text-align: center;
+  background-color: rgba(0, 9, 104, .7);
+}
+
+/* NavBar style */
+
+.sidebar {
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(77px);
+  overflow-x: hidden;
+  padding-top: 16px;
+  box-shadow: 0 0px 30px;
+}
+
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  display: block;
+  text-align: left;
+  padding: 40px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+  transition: 0.5s;
+}
+
+.sidebar a:hover {
+  color: #ffffff;
+  padding: 70px;
+  background-color: #747cdf;
+  border-radius: 10px;
+  opacity: calc(100%);
+}
+
+span{
+  position : absolute;
+  bottom : 15px;
+  padding: 6px 8px 6px 16px;
+  text-align:center;
+  font-style:italic;
+  font-size: 20px;
+  padding: 40px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+span:hover{
+  background-color: #fc6363;
+  padding: 70px;
+  font-weight: bold;
+}
+
+/* Chargement */
+
+.loader{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: black;
+  display: flex;
+  justify-content: center;
+  backdrop-filter: blur(250px);
+  z-index: 2;
+}
+
+.loader h3{
+  color: #747cdf;
+  text-decoration: none;
+  font-size: 50px;
+  margin-top: 350px;
+  position: absolute;
+}
+
+.loader .line {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  margin-top: 500px;
+  background-color: #747cdf;
+}
+
+.loader .line:nth-last-child(1){
+  animation: loadingC 2s 0.1s linear infinite;
+  background: #747cdf;
+}
+
+.loader .line:nth-last-child(2){
+  animation: loadingC 2s 0.2s linear infinite;
+  background: #74a2df;
+}
+
+.loader .line:nth-last-child(3){
+  animation: loadingC 2s 0.3s linear infinite;
+  background: #8474df;
+}
+
+.loader .line:nth-last-child(4){
+  animation: loadingC 2s 0.4s linear infinite;
+  background: #74cfdf;
+}
+
+/* Formulaire style */
+
+form {
+  padding: 100px;
+  background-color: white;
+  border-radius: 30px;
+  position: absolute;
+  margin-top: 10%;
+  margin-left: 20%;
+}
+
+form h2 {
+  font-size: 20px;
+}
+
+form .separation {
+  width: 100%;
+  height: 1px;
+  background-color: #747cdf;
+}
+
+form .corps-formulaire {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+form .corps-formulaire .groupe {
+  position: relative; /* Pour mettre positionner l’élément dans le flux normal de la page */
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+form .corps-formulaire .gauche .groupe input {
+  margin-top: 5px;
+  padding: 10px 5px 10px 30px;
+  border: 1px solid #c9c9c9;
+  outline-color: #747cdf;
+  border-radius: 5px;
+}
+
+form .corps-formulaire .gauche .groupe i {
+  position: absolute; /* positionné par rapport à son parent le plus proche positionné */
+  left: 0;
+  top: 25px;
+  padding: 9px 8px;
+  color: #747cdf;
+}
+
+form .corps-formulaire .droite {
+  margin-left: 40px;
+}
+
+form .corps-formulaire .droite .groupe {
+  height: 100%;
+}
+
+form .corps-formulaire .droite .groupe textarea {
+  margin-top: 5px;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border: 2px solid #747cdf;
+  outline: none;
+  border-radius: 5px;
+  resize: none;
+  height: 72%;
+}
+
+form .pied-formulaire button {
+  margin-top: 10px;
+  background-color: #747cdf;
+  color: white;
+  font-size: 15px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+form .pied-formulaire button:hover {
+  transform: scale(1.05);
+}
+
+/* Animation */
+
+@media screen and (max-width: 920px) {
+    form .corps-formulaire .droite {
+      margin-left: 0px;
+    }
+  }
+
+@keyframes shadowh1 {
+  0%{
+    box-shadow: 0 0px 30px black;
+  }
+  25%{
+    box-shadow: 0 0px 30px rgb(107, 0, 0);
+  }
+  50%{
+    box-shadow: 0 0px 30px rgb(0, 55, 107);
+  }
+  75%{
+    box-shadow: 0 0px 30px rgb(107, 0, 0);
+  }
+  100%{
+    box-shadow: 0 0px 30px black;
+  }
+  
+}
+
+@keyframes loadingC {
+  0% {
+    transform: translate(0, 0);
+  }
+  12.5% {
+    transform: translate(0, -45px);
+  }
+  25% {
+    transform: translate(0, 0);
+  }
+}
+
+.fondu-out {
+  opacity: 0;
+  transition: opacity 0.7s ease-out;
+  z-index: 0;
+}
